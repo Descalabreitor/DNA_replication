@@ -1,4 +1,4 @@
-from DNA_Generator import DNA_Generator
+from DNA import DNA_Generator
 from Nucleus import Nucleus
 
 def main():

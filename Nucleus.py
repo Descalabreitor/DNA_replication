@@ -1,14 +1,14 @@
-from DNA_Generator import DNA_Generator
-from DNA import DNA
+from DNA import DNA, DNA_Generator
+from Polimerasa import Polimerasa
 
 class Nucleus:
 
-    self.dna_list = []
+    dna_list = []
 
     def __init__(self, dna_list = []):
         if len(dna_list) == 0:
             dna_gen = DNA_Generator()
-            self.dna_list.extend(dna_gen.get_data())
+            self.dna_list.extend(dna_gen.gen_data())
 
 
     def replicate_dna(self):
