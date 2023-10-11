@@ -19,6 +19,9 @@ class DNA:
 
 class DNA_Generator:
 
+    def __init__(self, seed = 69):
+        np.random.seed = seed
+        
     codons_list =  ["ATG", "TTT", "TTC", "TTA", "TTG", "TCT", "TCC", "TCA", "TCG",
                          "TAT", "TAC", "TGT", "TGC", "TGG", "CTT", "CTC", "CTA", "CTG",
                          "CCT", "CCC", "CCA", "CCG", "CAT", "CAC", "CAA", "CAG", "CGT",
