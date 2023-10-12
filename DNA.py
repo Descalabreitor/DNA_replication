@@ -7,18 +7,18 @@ class DNA:
             self.data = DNA_Generator().gen_dna()
         if len(data) == 2:
             self.data = data[0]
-            self.helice = data
+            self.helix = data
         else:
             self.data = data
-            self.helice = [self.data, self.calcular_hebra_complementaria(self.data)]
+            self.helix = [self.data, self.get_complement_strand(self.data)]
 
-    def calcular_hebra_complementaria(self, secuencia_adn):
-        complemento = {"A": "T", "T": "A", "C": "G", "G": "C"}
-        hebra_complementaria = ''.join(complemento[base] for base in reversed(secuencia_adn))
-        return hebra_complementaria
+    def get_complement_strand(self, dna_sequence):
+        complement = {"A": "T", "T": "A", "C": "G", "G": "C"}
+        complementary_strand = ''.join(complement[base] for base in reversed(dna_sequence))
+        return complementary_strand
 
-    def get_helice(self):
-        return self.helice
+    def get_helix(self):
+        return self.helix
 
 class DNA_Generator:
 

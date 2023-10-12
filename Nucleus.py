@@ -1,5 +1,5 @@
 from DNA import DNA, DNA_Generator
-from Polimerasa import Polimerasa
+from Polimerase import Polimerase
 
 class Nucleus:
 
@@ -12,18 +12,18 @@ class Nucleus:
 
 
     def replicate_dna(self, meiosis=False):
-        polimerasa = Polimerasa()
+        polimerase = Polimerase()
         dna_list_1 = []
         dna_list_2 = []
         
         for dna in self.dna_list:
             if meiosis:
-                new_dna1, new_dna2 = polimerasa.meiosis_1(dna.get_helice())
-                new_dna3, new_dna4 = polimerasa.meiosis_2(dna.get_helice())
+                new_dna1, new_dna2 = polimerase.meiosis_1(dna.get_helice())
+                new_dna3, new_dna4 = polimerase.meiosis_2(dna.get_helice())
                 dna_list_1.append(DNA(''.join([new_dna1, new_dna2])))
                 dna_list_2.append(DNA(''.join([new_dna3, new_dna4])))
             else:
-                new_dna1, new_dna2 = polimerasa.mitosis(dna.get_helice())
+                new_dna1, new_dna2 = polimerase.mitosis(dna.get_helice())
                 dna_list_1.append(DNA(new_dna1))
                 dna_list_2.append(DNA(new_dna2))
 
