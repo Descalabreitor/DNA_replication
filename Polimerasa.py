@@ -1,7 +1,9 @@
 class Polimerasa:
     def mitosis(self, helice):
-        new_helice_1 = self.synthesize_strand(helice[0])
-        new_helice_2 = self.synthesize_strand(helice[1])
+        new_strand_1 = self.synthesize_strand(helice[0])
+        new_strand_2 = self.synthesize_strand(helice[1])
+        new_helice_1 = [helice[0], new_helice_1]
+        new_helice_2 = [helice[1], new_strand_2]
         return new_helice_1, new_helice_2
 
     def synthesize_strand(self, template_strand):

@@ -2,12 +2,15 @@ import numpy as np
 
 class DNA:
 
-    def __init__(self, data="", random=False):
+    def __init__(self, data, random=False):
         if random:
             self.data = DNA_Generator().gen_dna()
+        if len(data) == 2:
+            self.data = data[0]
+            self.helice = data
         else:
             self.data = data
-        self.helice = [self.data, self.calcular_hebra_complementaria(self.data)]
+            self.helice = [self.data, self.calcular_hebra_complementaria(self.data)]
 
     def calcular_hebra_complementaria(self, secuencia_adn):
         complemento = {"A": "T", "T": "A", "C": "G", "G": "C"}

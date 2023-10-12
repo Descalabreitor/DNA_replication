@@ -24,7 +24,7 @@ class Nucleus:
                 dna_list_2.append(DNA(''.join([new_dna3, new_dna4])))
             else:
                 new_dna1, new_dna2 = polimerasa.mitosis(dna.get_helice())
-                dna_list_1.append(DNA(''.join([new_dna1, new_dna2])))
-                dna_list_2.append(DNA(''.join([new_dna1, new_dna2])))
+                dna_list_1.append(DNA(new_dna1))
+                dna_list_2.append(DNA(new_dna2))
 
         return Nucleus(dna_list_1), Nucleus(dna_list_2)
