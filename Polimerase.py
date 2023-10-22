@@ -2,7 +2,7 @@ class Polimerase:
     def mitosis(self, helix):
         new_strand_1 = self.synthesize_strand(helix[0])
         new_strand_2 = self.synthesize_strand(helix[1])
-        new_helix_1 = [helix[0], new_helix_1]
+        new_helix_1 = [helix[0], new_strand_1]
         new_helix_2 = [helix[1], new_strand_2]
         return new_helix_1, new_helix_2
 
