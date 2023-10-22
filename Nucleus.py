@@ -18,12 +18,12 @@ class Nucleus:
         
         for dna in self.dna_list:
             if meiosis:
-                new_dna1, new_dna2 = polimerase.meiosis_1(dna.get_helice())
-                new_dna3, new_dna4 = polimerase.meiosis_2(dna.get_helice())
+                new_dna1, new_dna2 = polimerase.meiosis_1(dna.get_helix())
+                new_dna3, new_dna4 = polimerase.meiosis_2(dna.get_helix())
                 dna_list_1.append(DNA(''.join([new_dna1, new_dna2])))
                 dna_list_2.append(DNA(''.join([new_dna3, new_dna4])))
             else:
-                new_dna1, new_dna2 = polimerase.mitosis(dna.get_helice())
+                new_dna1, new_dna2 = polimerase.mitosis(dna.get_helix())
                 dna_list_1.append(DNA(new_dna1))
                 dna_list_2.append(DNA(new_dna2))
 

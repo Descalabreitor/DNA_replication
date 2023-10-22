@@ -17,11 +17,11 @@ def main():
     # Imprimir las hebras de ADN resultantes de la mitosis
     print("Mitosis - Hebras de ADN en Núcleo 1:")
     for dna in nucleus1_mitosis.dna_list:
-        print(dna.get_helice())
+        print(dna.get_helix())
 
     print("\nMitosis - Hebras de ADN en Núcleo 2:")
     for dna in nucleus2_mitosis.dna_list:
-        print(dna.get_helice())
+        print(dna.get_helix())
 
     # Replicar el ADN en el núcleo mediante meiosis
     nucleus1_meiosis, nucleus2_meiosis = nucleus.replicate_dna(meiosis=True)
@@ -29,11 +29,11 @@ def main():
     # Imprimir las hebras de ADN resultantes de la meiosis
     print("\nMeiosis - Hebras de ADN en Núcleo 1:")
     for dna in nucleus1_meiosis.dna_list:
-        print(dna.get_helice())
+        print(dna.get_helix())
 
     print("\nMeiosis - Hebras de ADN en Núcleo 2:")
     for dna in nucleus2_meiosis.dna_list:
-        print(dna.get_helice())
+        print(dna.get_helix())
 
 if __name__ == "__main__":
     main()
